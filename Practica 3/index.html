@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula 1</title>
+    <style>
+        .contenedor {
+            width: 90%;
+            margin: auto;
+            border: 3px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            text-align: center;
+        }
+        img {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+        }
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            width: 100%;         
+        }
+        #visor {
+            width: 50%;
+            height: auto;
+            border: none;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Fórmula 1</h1>
+        <table>
+            <tr>
+                <td><img src="imagenes/Red bull.png" onclick="mostrarImagen('imagenes/Red bull.png')"></td>
+                <td><img src="imagenes/Ferrari.png" onclick="mostrarImagen('imagenes/Ferrari.png')"></td>
+                <td><img src="imagenes/Mercedes.png" onclick="mostrarImagen('imagenes/Mercedes.png')"></td>
+                <td><img src="imagenes/Aston Martin.png" onclick="mostrarImagen('imagenes/Aston Martin.png')"></td>
+            </tr>
+        </table>
+        <div class="iframe-container">
+            <img id="visor" src="">
+        </div>
+    </div>
+    <script>
+        function mostrarImagen(src) {
+            var visor = document.getElementById('visor');
+            visor.src = src;
+            visor.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
