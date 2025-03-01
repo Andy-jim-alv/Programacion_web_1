@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>2ndo Parcial - 1era Practica</title>
+    <style>
+        body {
+            background-color: #e0b3ff; 
+            font-family: Arial, sans-serif;
+        }
+        fieldset {
+            background-color: #f5e1ff;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: inline-block;
+            width: 130px;
+            margin: 5px 0;
+            text-align: right;
+        }
+        input, select {
+            width: 180px;
+            margin: 5px 10px;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        form {
+            width: 80%;
+            margin: auto;
+        }
+        .seccion {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .seccion input, .seccion select {
+            flex: 1;
+        }
+        .terminos-botones {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .terminos-botones input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .botones {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Porsche San Luis Potosí</h1>
+        <h2>Compras online</h2>
+    </center>
+
+    <form action="" method="post">
+        <!-- Información general del cliente -->
+        <fieldset>
+            <legend>Información general del cliente</legend>
+
+            <div class="seccion">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+
+                <label for="apellido_paterno">Apellido paterno:</label>
+                <input type="text" name="apellido_paterno" id="apellido_paterno" placeholder="Apellido paterno">
+
+                <label for="apellido_materno">Apellido materno:</label>
+                <input type="text" name="apellido_materno" id="apellido_materno" placeholder="Apellido materno">
+            </div>
+
+            <div class="seccion">
+                <label for="usuario">Nombre de usuario:</label>
+                <input type="text" name="usuario" id="usuario" placeholder="Usuario" required>
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+
+                <label for="fecha_registro">Fecha de registro:</label>
+                <input type="date" name="fecha_registro" id="fecha_registro">
+            </div>
+        </fieldset>
+
+        <!-- Datos para facturar -->
+        <fieldset>
+            <legend>Datos para facturar</legend>
+
+            <div class="seccion">
+                <label for="pais">País:</label>
+                <select name="pais" id="pais">
+                    <option>México</option>
+                    <option>Canadá</option>
+                    <option>Reino Unido</option>
+                </select>
+
+                <label for="ciudad">Ciudad:</label>
+                <select name="ciudad" id="ciudad">
+                    <option>San Luis Potosí</option>
+                    <option>Monterrey</option>
+                    <option>Cd. Valles</option>
+                    <option>Querétaro</option>
+                </select>
+            </div>
+
+            <div class="seccion">
+                <label for="numero_casa">Número de casa:</label>
+                <input type="number" name="numero_casa" id="numero_casa" placeholder="Número exterior">
+
+                <label for="calle">Calle:</label>
+                <input type="text" name="calle" id="calle" placeholder="Calle">
+            </div>
+
+            <div class="seccion">
+                <label for="colonia">Colonia:</label>
+                <input type="text" name="colonia" id="colonia" placeholder="Colonia">
+
+                <label for="cp">C.P.:</label>
+                <input type="text" name="cp" id="cp" placeholder="Código postal">
+            </div>
+
+            <div class="seccion">
+                <label for="rfc">R.F.C.:</label>
+                <input type="text" name="rfc" id="rfc" placeholder="RFC" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+            </div>
+
+            <!-- Términos y botones alineados a la derecha -->
+            <div class="terminos-botones">
+
+                    <input type="checkbox" name="terminos" id="terminos" required>
+                    <label for="Condiciones">Acepto terminos y condiciones</label>
+                
+                <div class="botones">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Restablecer">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <br>
+    <div style="text-align: right;">
+        <strong>Febrero 2025, SLP.</strong>
+    </div>
+</body>
+</html>
+
